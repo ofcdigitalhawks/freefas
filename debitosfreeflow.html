@@ -324,26 +324,20 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <button class="back-btn" onclick="window.history.back()">←</button>
         <h1>Débitos</h1>
     </header>
 
-    <!-- Main Container -->
     <div class="container">
-        <!-- Loading State -->
         <div id="loading" class="loading">
             <div class="spinner"></div>
             <p>Carregando informações do veículo...</p>
         </div>
 
-        <!-- Error State -->
         <div id="error" class="error-message" style="display: none;"></div>
 
-        <!-- Content -->
         <div id="content" style="display: none;">
-            <!-- Vehicle Card -->
             <div class="vehicle-card">
                 <div class="vehicle-label">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -372,7 +366,6 @@
                 </div>
             </div>
 
-            <!-- Alert Box -->
             <div class="alert-box">
                 <div class="alert-title">
                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -392,13 +385,11 @@
                 </div>
             </div>
 
-            <!-- Débitos Section -->
             <div class="debits-section">
                 <h2>Débitos</h2>
                 <div id="debitsList"></div>
             </div>
 
-            <!-- Total Section -->
             <div class="total-section">
                 <div>
                     <div class="total-label">Total a pagar</div>
@@ -406,7 +397,6 @@
                 <div class="total-amount" id="totalAmount">R$ 0,00</div>
             </div>
 
-            <!-- Checkout Button -->
             <button class="checkout-btn" id="checkoutBtn" onclick="goToCheckout()">
                 Continuar
             </button>
@@ -459,11 +449,11 @@
 
             let total = 0;
 
-            // Mock débito - substitua com dados reais da API se disponível
+            // Mock débito atualizado conforme solicitação
             const debit = {
                 placa: data.placa,
                 operadora: data.operadora || 'ECOVIAS NOROESTE',
-                valor: 64,90,
+                valor: 64.90,
                 data: new Date().toLocaleDateString('pt-BR')
             };
 
